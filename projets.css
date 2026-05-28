@@ -1,0 +1,171 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242582;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------- MENU ---------------- */
+
+header aside {
+    background-color: #553D67;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header aside a {
+    text-decoration: none;
+    color: white;
+}
+
+.zoom {
+    transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.15);
+}
+
+#titre-projets{
+    text-align:center;
+    padding:4em 2em;
+}
+
+#titre-projets h1{
+    font-size:3.5rem;
+    margin-bottom:0.5em;
+}
+
+#titre-projets p{
+    font-size:1.1rem;
+}
+
+/* ---------------- PROJETS ---------------- */
+
+#liste-projets{
+    display:flex;
+    flex-direction:column;
+    gap:3em;
+    max-width:1200px;
+    margin:auto;
+    padding:2em;
+}
+
+.projet{
+    background-color:#553D67;
+    display:flex;
+    align-items:center;
+    gap:2em;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    transition:all 0.3s ease;
+}
+
+.projet:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+.projet img{
+    width:350px;
+    height:250px;
+    object-fit:cover;
+}
+
+.contenu-projet{
+    padding:2em;
+}
+
+.contenu-projet h2{
+    margin-bottom:0.8em;
+}
+
+.contenu-projet p{
+    line-height:1.7;
+}
+
+.contenu-projet p > a{
+    text-decoration: none;
+    color : white;
+}
+
+details{
+    margin-top:1.5em;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    background-color:#242582;
+    padding:0.8em;
+    border-radius:10px;
+    transition:all 0.3s ease;
+}
+
+summary:hover{
+    transform:scale(1.03);
+}
+
+details p{
+    margin-top:1em;
+}
+
+#retour {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: #553D67;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+#retour:hover {
+    transform: scale(1.1);
+}
+
+#retour img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width:640px){
+
+    #titre-projets h1{
+        font-size:2.3rem;
+    }
+
+    .projet{
+        flex-direction:column;
+    }
+
+    .projet img{
+        width:100%;
+        height:220px;
+    }
+
+    .contenu-projet{
+        padding:1.5em;
+    }
+
+}

@@ -1,0 +1,194 @@
+/* apropos */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242582;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------- MENU ---------------- */
+
+header aside {
+    background-color: #553D67;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header aside a {
+    text-decoration: none;
+    color: white;
+}
+
+.zoom {
+    transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.15);
+}
+
+/* ---------------- HERO ---------------- */
+
+#hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    padding: 4em;
+}
+
+#presentation {
+    width: 50%;
+}
+
+#presentation h1 {
+    font-size: 4rem;
+    margin-bottom: 0.2em;
+}
+
+#presentation h2 {
+    color: #d7c8ff;
+    margin-bottom: 1em;
+}
+
+#presentation p {
+    margin-bottom: 1em;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+#hero figure {
+    width: 350px;
+}
+
+#hero figure img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease;
+}
+
+#hero figure img:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------- BOUTON ---------------- */
+
+.bouton {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: #553D67;
+    color: white;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.bouton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------- A PROPOS ---------------- */
+
+#apropos {
+    max-width: 1000px;
+    margin: auto;
+    padding: 4em 2em;
+}
+
+#apropos h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 2.5rem;
+}
+
+#apropos article {
+    background-color: #553D67;
+    padding: 2em;
+    border-radius: 20px;
+    line-height: 1.8;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#apropos article p {
+    margin-bottom: 1em;
+}
+
+/* ---------------- RETOUR HAUT ---------------- */
+
+#retour {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 70px;
+    height: 70px;
+    background-color: #553D67;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+#retour:hover {
+    transform: scale(1.1);
+}
+
+#retour img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width:640px) {
+
+    header aside {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    #hero {
+        flex-direction: column-reverse;
+        padding: 2em;
+        text-align: center;
+    }
+
+    #presentation {
+        width: 100%;
+    }
+
+    #presentation h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero figure {
+        width: 220px;
+    }
+
+    #apropos {
+        padding: 2em 1em;
+    }
+
+    #apropos h2 {
+        font-size: 2rem;
+    }
+
+}
