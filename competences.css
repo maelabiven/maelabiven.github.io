@@ -92,6 +92,10 @@ header aside a {
     line-height:1.7;
 }
 
+.competence p > strong > a{
+    color : white;
+}
+
 /* ----- OUTILS ----- */
 
 #outils{
