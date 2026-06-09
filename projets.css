@@ -104,6 +104,11 @@ header aside a {
     color : white;
 }
 
+.contenu-projet p > strong > a{
+    
+    color : white;
+}
+
 details{
     margin-top:1.5em;
 }
